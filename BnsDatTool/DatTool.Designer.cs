@@ -1,4 +1,8 @@
-﻿namespace BnsDatTool
+﻿using System.Globalization;
+using System.Threading;
+using System; 
+
+namespace BnsDatTool
 {
     partial class BnsDatTool
     {
@@ -97,6 +101,8 @@
             this.BtnEncDecSearch = new System.Windows.Forms.Button();
             this.GboxTools = new System.Windows.Forms.GroupBox();
             this.Cbox64Bit = new System.Windows.Forms.CheckBox();
+            this.comboBoxLanguage = new System.Windows.Forms.ComboBox();
+            this.tabPageLanguage = new System.Windows.Forms.TabPage();
             this.groupBox2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -105,6 +111,7 @@
             this.EncDec.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.GboxTools.SuspendLayout();
+            this.tabPageLanguage.SuspendLayout();
             this.SuspendLayout();
             // 
             // bntSearchDat
@@ -242,6 +249,10 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(458, 165);
             this.tabControl1.TabIndex = 24;
+            this.tabControl1.TabPages.Insert(0, this.tabPageLanguage);
+            this.tabControl1.SelectedTab = this.tabPageLanguage;
+            this.tabControl1.TabPages.Add(this.tabPageLanguage);
+            
             // 
             // tabPage1
             // 
@@ -809,6 +820,29 @@
             this.Cbox64Bit.Text = "64-bit";
             this.Cbox64Bit.UseVisualStyleBackColor = true;
             // 
+            // comboBoxLanguage
+            // 
+            this.comboBoxLanguage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxLanguage.FormattingEnabled = true;
+            this.comboBoxLanguage.Items.AddRange(new object[] {
+            "English",
+            "中文"});
+            this.comboBoxLanguage.SelectedIndex = 0;
+            this.comboBoxLanguage.Location = new System.Drawing.Point(10, 10);
+            this.comboBoxLanguage.Size = new System.Drawing.Size(120, 21);
+            this.comboBoxLanguage.SelectedIndexChanged += new System.EventHandler(this.ComboBoxLanguage_SelectedIndexChanged);
+            // 
+            // tabPageLanguage
+            // 
+            this.tabPageLanguage.Controls.Add(this.comboBoxLanguage);
+            this.tabPageLanguage.Location = new System.Drawing.Point(4, 22);
+            this.tabPageLanguage.Name = "tabPageLanguage";
+            this.tabPageLanguage.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageLanguage.Size = new System.Drawing.Size(450, 139);
+            this.tabPageLanguage.TabIndex = 5;
+            this.tabPageLanguage.Text = "language";
+            this.tabPageLanguage.UseVisualStyleBackColor = true;
+            // 
             // BnsDatTool
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -836,6 +870,7 @@
             this.tabPage4.PerformLayout();
             this.GboxTools.ResumeLayout(false);
             this.GboxTools.PerformLayout();
+            this.tabPageLanguage.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -910,6 +945,97 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.CheckBox CheckBoxTranslateXmldat;
         private System.Windows.Forms.CheckBox Cbox64Bit;
+        private System.Windows.Forms.ComboBox comboBoxLanguage;
+        private System.Windows.Forms.TabPage tabPageLanguage;
+
+        private void SetLanguage(string cultureName)
+        {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(cultureName);
+            if (cultureName == "zh-CN")
+                comboBoxLanguage.SelectedIndex = 1; // "中文"
+            else if (cultureName == "en-US")
+                comboBoxLanguage.SelectedIndex = 0; // "English"
+            ApplyLanguage();
+        }
+
+        private void ApplyLanguage()
+        {
+            // 按钮文本
+            this.bntSearchDat.Text = Properties.Resources.SearchButtonText;
+            this.bntSearchOut.Text = Properties.Resources.SearchButtonText;
+            this.bntUnpack.Text = Properties.Resources.UnpackButtonText;
+            this.btnRepack.Text = Properties.Resources.RepackButtonText;
+            this.btnSeaarchBin.Text = Properties.Resources.SearchButtonText;
+            this.btnDump.Text = Properties.Resources.DumpButtonText;
+            this.btnOutBin.Text = Properties.Resources.SearchButtonText;
+            this.BtnSTranslate.Text = Properties.Resources.StartButtonText;
+            this.BtnSSource.Text = Properties.Resources.SearchButtonText;
+            this.BtnSTarget.Text = Properties.Resources.SearchButtonText;
+            this.BtnTranslate.Text = Properties.Resources.TranslateButtonText;
+            this.BtnRepackTranslation.Text = Properties.Resources.RepackButtonText;
+            this.BtnSearchLocal.Text = Properties.Resources.SearchButtonText;
+            this.BtnMerge.Text = Properties.Resources.MergeButtonText;
+            this.BtnSearchOutput.Text = Properties.Resources.SearchButtonText;
+            this.BtnExport.Text = Properties.Resources.ExportButtonText;
+            this.BtnSourceSearch.Text = Properties.Resources.SearchButtonText;
+            this.BtnUnpack.Text = Properties.Resources.UnpackButtonText;
+            this.BtnSearchMerge.Text = Properties.Resources.SearchButtonText;
+            this.BtnEncode.Text = Properties.Resources.EncodeButtonText;
+            this.BtnDecode.Text = Properties.Resources.DecodeButtonText;
+            this.BtnEncDecSearch.Text = Properties.Resources.SearchButtonText;
+
+            // 标签文本
+            this.lbDat.Text = Properties.Resources.DatFileLabelText;
+            this.lbRfolder.Text = Properties.Resources.RepackFolderLabelText;
+            this.label1.Text = Properties.Resources.BinFileLabelText;
+            this.label2.Text = Properties.Resources.OutputFolderLabelText;
+            this.label3.Text = Properties.Resources.TargetLabelText;
+            this.label4.Text = Properties.Resources.TargetKeyLabelText;
+            this.label5.Text = Properties.Resources.SourceKeyLabelText;
+            this.label6.Text = Properties.Resources.KeyLabelText;
+            this.label7.Text = Properties.Resources.SourceLabelText;
+            this.label8.Text = Properties.Resources.LocalDatLabelText;
+            this.label9.Text = Properties.Resources.OutputLabelText;
+            this.label10.Text = Properties.Resources.TargetFileLabelText;
+            this.label11.Text = Properties.Resources.SourceFileLabelText;
+            this.label12.Text = Properties.Resources.KeyLabelText;
+            this.labelMode.Text = Properties.Resources.ModeLabelText;
+
+            // 复选框文本
+            this.cB_output.Text = Properties.Resources.GetFolderLocationCheckBoxText;
+            this.cboxGetBinFolder.Text = Properties.Resources.GetFolderLocationCheckBoxText;
+            this.Cb_back.Text = Properties.Resources.BackupOriginalCheckBoxText;
+            this.CheckBoxTranslateXmldat.Text = Properties.Resources.XmlDatCheckBoxText;
+            this.Cbox64Bit.Text = Properties.Resources.Bit64CheckBoxText;
+
+            // 选项卡标题
+            this.tabPage1.Text = Properties.Resources.DatFilesTabText;
+            this.tabPage2.Text = Properties.Resources.BinFilesTabText;
+            this.tabPage3.Text = Properties.Resources.AutoTranslateTabText;
+            this.EncDec.Text = Properties.Resources.ManualTranslateTabText;
+            this.tabPage4.Text = Properties.Resources.EncodeDecodeTabText;
+            this.tabPageLanguage.Text = Properties.Resources.LanguageTabText;
+
+            // 分组框标题
+            this.groupBox2.Text = Properties.Resources.LogGroupBoxText;
+            this.GboxTools.Text = Properties.Resources.ToolsGroupBoxText;
+        }
+
+        private void ComboBoxLanguage_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxLanguage.SelectedItem.ToString() == "English")
+            {
+                SetLanguage("en-US");
+            }
+            else if (comboBoxLanguage.SelectedItem.ToString() == "中文")
+            {
+                SetLanguage("zh-CN");
+            }
+        }
     }
 }
+
+
+
+
 

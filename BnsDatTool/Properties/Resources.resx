@@ -109,9 +109,117 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="SearchButtonText" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="UnpackButtonText" xml:space="preserve">
+    <value>Unpack</value>
+  </data>
+  <data name="RepackButtonText" xml:space="preserve">
+    <value>Repack</value>
+  </data>
+  <data name="DumpButtonText" xml:space="preserve">
+    <value>Dump</value>
+  </data>
+  <data name="StartButtonText" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="TranslateButtonText" xml:space="preserve">
+    <value>Translate</value>
+  </data>
+  <data name="MergeButtonText" xml:space="preserve">
+    <value>Merge</value>
+  </data>
+  <data name="ExportButtonText" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="EncodeButtonText" xml:space="preserve">
+    <value>Encode</value>
+  </data>
+  <data name="DecodeButtonText" xml:space="preserve">
+    <value>Decode</value>
+  </data>
+  <data name="DatFileLabelText" xml:space="preserve">
+    <value>.dat File:</value>
+  </data>
+  <data name="RepackFolderLabelText" xml:space="preserve">
+    <value>Repack Folder:</value>
+  </data>
+  <data name="BinFileLabelText" xml:space="preserve">
+    <value>.bin File:</value>
+  </data>
+  <data name="OutputFolderLabelText" xml:space="preserve">
+    <value>Output Folder:</value>
+  </data>
+  <data name="TargetLabelText" xml:space="preserve">
+    <value>Target:</value>
+  </data>
+  <data name="TargetKeyLabelText" xml:space="preserve">
+    <value>Target Key:</value>
+  </data>
+  <data name="SourceKeyLabelText" xml:space="preserve">
+    <value>Source Key:</value>
+  </data>
+  <data name="KeyLabelText" xml:space="preserve">
+    <value>Key:</value>
+  </data>
+  <data name="SourceLabelText" xml:space="preserve">
+    <value>Source:</value>
+  </data>
+  <data name="LocalDatLabelText" xml:space="preserve">
+    <value>local.dat:</value>
+  </data>
+  <data name="OutputLabelText" xml:space="preserve">
+    <value>Output:</value>
+  </data>
+  <data name="TargetFileLabelText" xml:space="preserve">
+    <value>Target File:</value>
+  </data>
+  <data name="SourceFileLabelText" xml:space="preserve">
+    <value>Source File:</value>
+  </data>
+  <data name="ModeLabelText" xml:space="preserve">
+    <value>Mode:</value>
+  </data>
+  <data name="GetFolderLocationCheckBoxText" xml:space="preserve">
+    <value>Get Folder location</value>
+  </data>
+  <data name="BackupOriginalCheckBoxText" xml:space="preserve">
+    <value>Backup Original</value>
+  </data>
+  <data name="XmlDatCheckBoxText" xml:space="preserve">
+    <value>xml.dat</value>
+  </data>
+  <data name="Bit64CheckBoxText" xml:space="preserve">
+    <value>64-bit</value>
+  </data>
+  <data name="DatFilesTabText" xml:space="preserve">
+    <value>Dat Files</value>
+  </data>
+  <data name="BinFilesTabText" xml:space="preserve">
+    <value>Bin Files</value>
+  </data>
+  <data name="AutoTranslateTabText" xml:space="preserve">
+    <value>Auto Translate</value>
+  </data>
+  <data name="ManualTranslateTabText" xml:space="preserve">
+    <value>Manual Translate</value>
+  </data>
+  <data name="EncodeDecodeTabText" xml:space="preserve">
+    <value>Encode/Decode</value>
+  </data>
+  <data name="LanguageTabText" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="LogGroupBoxText" xml:space="preserve">
+    <value>Log:</value>
+  </data>
+  <data name="ToolsGroupBoxText" xml:space="preserve">
+    <value>Tools</value>
+  </data>
 </root>

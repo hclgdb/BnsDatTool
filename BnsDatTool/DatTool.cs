@@ -42,6 +42,7 @@ namespace BnsDatTool
         }
         private void BnsDatTool_Load(object sender, EventArgs e)
         {
+            SetLanguage("zh-CN"); // 设置默认语言为中文
             tabPage3.Enabled = false;
             _writer = new StrWriter(richOut);
             Console.SetOut(_writer);
